@@ -1,19 +1,5 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/backend-node/server.js"
-    },
-    {
-      "source": "/uploads/(.*)",
-      "destination": "/backend-node/uploads/$1"
-    },
-    {
-      "source": "/(.*s)",
-      "destination": "/frontend/$1"
-    }
-  ],
   "builds": [
     {
       "src": "backend-node/server.js",
@@ -22,6 +8,20 @@
     {
       "src": "frontend/**",
       "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend-node/server.js"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "/backend-node/server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/$1"
     }
   ]
 }
