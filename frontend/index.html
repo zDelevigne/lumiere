@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUMIÈRE</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+        <!-- Header / Nav -->
+        <header class="navbarglass">
+            <div class="container nav-content">
+                <a href="#/" class="logo">
+                    <img src="assets/images/logo.png" alt="Logo" class="logo-img">
+                    CAFÉ<span>LUMIÈRE</span>
+                </a>
+                
+                <button class="menu-toggle" aria-label="Abrir Menú">
+                    <span class="material-icons-round">menu</span>
+                </button>
+
+                <nav class="nav-links">
+                    <a href="#/" class="nav-link active">
+                        <span class="material-icons-round">home</span> Inicio
+                    </a>
+                    <a href="#/products" class="nav-link">
+                        <span class="material-icons-round">restaurant_menu</span> Menú
+                    </a>
+                    <a href="#/cart" class="nav-link">
+                        <span class="material-icons-round">shopping_bag</span>
+                        <span id="cart-count">0</span>
+                    </a>
+                    <div id="auth-links" class="auth-group">
+                        <!-- Se llena dinámicamente -->
+                        <a href="#/login" class="nav-link">Login</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+      <!-- Main Content Area -->
+      <main id="main-content" class="container fade-in">
+        <!-- Vistas se inyectan aquí -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <span class="hero-subtitle">Experiencia Premium</span>
+            <h1>El Arte del Café Tostado</h1>
+            <p>Descubre sabores únicos en un ambiente diseñado para los amantes del buen café.</p>
+            <div class="hero-btns">
+                <a href="#/products" class="btn-primary">Ver Catálogo</a>
+                <a href="#/about" class="btn-secondary">Nuestra Historia</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Toast Notifications Container -->
+      <div id="toast-container"></div>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="nav-overlay" class="nav-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
